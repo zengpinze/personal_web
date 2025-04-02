@@ -39,3 +39,120 @@ footer {
     padding: 10px;
     background-color: #ddd;
 }
+
+
+
+/* 林邊車站圖片 */
+
+/* 外部容器樣式 */
+.content-section {
+    display: flex; /* 新增 Flex 排版，讓文字和圖片排成同行 */
+    justify-content: space-between; /* 新增左右分佈，文字靠左，圖片靠右 */
+    align-items: center; /* 新增垂直方向居中 */
+    margin: 20px; /* 新增上下左右的外間距 */
+}
+
+/* 文字內容樣式 */
+.text-content {
+    flex: 2; /* 新增，讓文字區域佔比較大的空間 */
+    margin-right: 20px; /* 新增文字與圖片的右側間距 */
+    font-size: 16px; /* 調整文字大小 */
+}
+
+/* 圖片內容樣式 */
+.image-content img {
+    width: auto; /* 新增，自動調整圖片寬度 */
+    max-height: 150px; /* 新增，限制圖片最大高度 */
+    border-radius: 10px; /* 新增，圖片增加圓角效果 */
+}
+
+
+
+/* 林邊車站圖片，底下的文字 */
+.image-content {
+    text-align: center; 
+}
+
+.image-content p {
+    margin-top: 10px; 
+    font-size: 16px; 
+    color: #333; 
+}
+
+/* 結束 */
+
+
+
+
+
+
+
+
+
+/* 網頁的那些白色框框 */
+
+
+/* 容器樣式 */
+.container {
+    width: 100%; /* 全寬 */
+    max-width: 1200px; /* 最大寬度 */
+    margin: 0 auto; /* 讓容器置中 */
+}
+
+/* 每一排 (row) 的佈局 */
+.row {
+    display: flex; /* 使用 Flex 排版 */
+    justify-content: space-between; /* 左右方格對稱分佈 */
+    margin-bottom: 20px; /* 每排之間的間距 */
+}
+
+/* 方框基礎樣式 */
+.box {
+    width: 45%; /* 每個方框的寬度為容器的 45% */
+    padding: 20px; /* 內距 */
+    background-color: #f9f9f9; /* 背景顏色 */
+    border: 2px solid #ccc; /* 邊框顏色 */
+    border-radius: 15px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+    margin: 0 10px; /* 新增左右邊距，讓左右方格不緊貼 */ 
+}
+
+/* 標題樣式 */
+.box .title {
+    font-size: 20px; /* 標題字體大小 */
+    font-weight: bold; /* 粗體 */
+    text-align: center; /* 文字置中 */
+    margin-bottom: 10px; /* 與子標題的間距 */
+}
+
+/* 子標題內的文字 */
+.box .subtitle {
+    display: flex; /* 使用 Flex 排版 */
+    justify-content: flex-start; /* 靠左對齊 */
+    gap: 10px; /* 左右文字之間的間距 */
+}
+
+/* 子標題靠左文字 */
+.box .subtitle .left {
+    color: #333; /* 靠左文字顏色 */
+    font-size: 16px; /* 字體大小 */
+}
+
+/* 子標題右側連結 */
+.box .subtitle .right {
+    color: #007bff; /* 超連結顏色 */
+    text-decoration: none; /* 去除下劃線 */
+}
+
+.box .subtitle .right:hover {
+    text-decoration: underline; /* 滑鼠懸停效果 */
+}
+
+/* 結束 */
+
+
+
+/* 最後那邊20250403製作，那句話 */
+.right-text {
+    text-align: right; /* 僅這個段落的文字靠右對齊 */
+}
