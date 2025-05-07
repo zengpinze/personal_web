@@ -83,7 +83,13 @@ footer {
 
 
 
-
+        pre {
+            white-space: pre-wrap; /* 允許換行 */
+            word-wrap: break-word;  /* 自動換行 */
+            max-width: 100%;        /* 限制寬度，不超過螢幕 */
+            overflow-x: auto;       /* 允許左右滑動 */
+            font-size: 4vw;         /* 使用 vw 讓字體大小自適應 */
+        }
 
 
 
