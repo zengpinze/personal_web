@@ -167,38 +167,42 @@ footer {
 
 
 
+/* Responsive Design */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px; /* 整體文字縮小 */
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
-
-    .content-section {
-        flex-direction: column; /* 讓文字與圖片上下排列 */
-        align-items: flex-start; /* 讓對齊方式靠左 */
+    .menu-toggle {
+        display: block;
+        align-self: flex-end;
+        margin-top: -2.5rem;
     }
-
-    .text-content {
-        margin-right: 0; /* 移除文字區域的右側間距 */
-        font-size: 14px; /* 調整文字大小 */
+    .main-nav {
+        width: 100%;
+        margin-top: 1rem;
     }
-
-    .image-content img {
-        max-width: 100%; /* 圖片寬度設定為全寬 */
-        max-height: none; /* 取消高度限制 */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
     }
-
-    .row {
-        flex-direction: column; /* 改為單欄縱向排列 */
-        margin-bottom: 10px; /* 縮小每排的間距 */
+    .nav-list.active {
+        display: flex;
     }
-
-    .box {
-        width: 100%; /* 每個方框佔滿整排 */
-        margin: 10px 0; /* 增加上下距離 */
+    .nav-list li {
+        margin: 0.5rem 0;
     }
-}
-
-button {
-    font-size: 16px; /* 提高按鈕字體大小 */
-    padding: 15px 25px; /* 增加按鈕內距 */
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-section {
+        flex-basis: 100%;
+    }
 }
