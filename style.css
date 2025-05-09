@@ -83,13 +83,13 @@ footer {
 
 
 
-        pre {
-            white-space: pre-wrap; /* 允許換行 */
-            word-wrap: break-word;  /* 自動換行 */
-            max-width: 100%;        /* 限制寬度，不超過螢幕 */
-            overflow-x: auto;       /* 允許左右滑動 */
-            font-size: 4vw;         /* 使用 vw 讓字體大小自適應 */
-        }
+pre {
+    white-space: pre-wrap; /* 允許換行 */
+    word-wrap: break-word;  /* 自動換行 */
+    max-width: 100%;        /* 限制寬度，不超過螢幕 */
+    overflow-x: auto;       /* 允許左右滑動 */
+    font-size: 4vw;         /* 使用 vw 讓字體大小自適應 */
+}
 
 
 
@@ -97,61 +97,60 @@ footer {
 
 /* 網頁的那些白色框框 */
 
-
 /* 容器樣式 */
 .container {
-    width: 100%; /* 全寬 */
-    max-width: 1200px; /* 最大寬度 */
-    margin: 0 auto; /* 讓容器置中 */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 每一排 (row) 的佈局 */
 .row {
-    display: flex; /* 使用 Flex 排版 */
-    justify-content: space-between; /* 左右方格對稱分佈 */
-    margin-bottom: 20px; /* 每排之間的間距 */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 /* 方框基礎樣式 */
 .box {
-    width: 45%; /* 每個方框的寬度為容器的 45% */
-    padding: 20px; /* 內距 */
-    background-color: #f9f9f9; /* 背景顏色 */
-    border: 2px solid #ccc; /* 邊框顏色 */
-    border-radius: 15px; /* 圓角效果 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    margin: 0 10px; /* 新增左右邊距，讓左右方格不緊貼 */ 
+    width: 45%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* 標題樣式 */
 .box .title {
-    font-size: 20px; /* 標題字體大小 */
-    font-weight: bold; /* 粗體 */
-    text-align: center; /* 文字置中 */
-    margin-bottom: 10px; /* 與子標題的間距 */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-/* 子標題內的文字 */
+/* 子標題樣式 */
 .box .subtitle {
-    display: flex; /* 使用 Flex 排版 */
-    justify-content: flex-start; /* 靠左對齊 */
-    gap: 10px; /* 左右文字之間的間距 */
+    display: flex;
+    justify-content: center; /* 讓內容置中 */
+    gap: 10px;
 }
 
-/* 子標題靠左文字 */
-.box .subtitle .left {
-    color: #333; /* 靠左文字顏色 */
-    font-size: 16px; /* 字體大小 */
-}
-
-/* 子標題右側連結 */
+/* 子標題連結樣式 */
 .box .subtitle .right {
-    color: #007bff; /* 超連結顏色 */
-    text-decoration: none; /* 去除下劃線 */
+    color: #007bff;
+    text-decoration: none;
 }
 
 .box .subtitle .right:hover {
-    text-decoration: underline; /* 滑鼠懸停效果 */
+    text-decoration: underline;
 }
 
 /* 結束 */
@@ -167,8 +166,21 @@ footer {
 
 
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* 讓內容垂直排列 */
+    }
+
+    .text-content, .image-content {
+        width: 100%; /* 讓文字和圖片各佔整個寬度 */
+    }
+
+    img {
+        max-width: 100%; /* 確保圖片不會超出螢幕 */
+        height: auto;
+    }
     .header .container {
         flex-direction: column;
         align-items: flex-start;
