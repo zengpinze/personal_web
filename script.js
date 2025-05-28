@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const message = document.getElementById("message");
 
     button.addEventListener("click", function() {
-        message.textContent = "願每個人能勇敢提筆，書寫那段只屬於自己的傳奇";
+        message.textContent = "我現在想不到要打什麼所以先這樣";
         message.style.fontSize = "16px";  // 讓字變小
         message.style.color = "#888";  // 讓字變淺
         message.style.opacity = "0.8";  // 讓字稍微透明
