@@ -9,130 +9,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="pin_Mode_favicon.png">
 
-
 </head>
 
 <body>
-    <header>
-        <h1>Welcome</h1>
+    <header class="site-header">
+        <a class="logo" href="#home">Zeng Pinze</a>
+        <nav class="nav" id="nav">
+            <a href="#home">首頁</a>
+            <a href="#about">關於我</a>
+            <a href="#social">社交軟體</a>
+            <a href="#portfolio">我的專案</a>
+            <a href="#services">未來研究方向</a>
+            <a href="#contact">聯絡方式</a>
+        </nav>
+        <button id="menuBtn" class="touch-btn" aria-label="開啟選單">☰</button>
     </header>
+
     <main>
-        <section class="content-section"> <!-- 新增類別 'content-section'，用來統一控制文字和圖片的排版 -->
-            <div class="text-content"> <!-- 新增文字的容器，為文字內容區 -->
-                <h2>嗨，我是Zeng Pinze (pin_77.)</h2>
-                <h3>
-                    <p>程式世界//鐵道文化//地科的神奇興趣組合(●'◡'●)
-                    <h5 style="font-weight: normal;">
-                        &nbsp;雖然零天賦但想學好資訊......希望別敗在這地方#）
-                    </h5>
-                    </p>
-                </h3>
-                <button id="greetButton">觸碰按鈕</button>
-                <p id="message"></p>
+        <!-- HERO / 首頁 -->
+        <section id="home" class="hero">
+            <div class="hero-inner">
+                <h1 contenteditable="true" class="editable" data-placeholder="在此填入你的標題">嗨，我是 Zeng Pinze</h1>
+                <p contenteditable="true" class="editable" data-placeholder="在此填入一句話自我介紹">程式世界//鐵道文化//地科的神奇興趣組合(●'◡'●)
+                </p>
+                <div class="hero-ctas">
+                    <a class="btn primary touch-btn" href="#portfolio">查看專案</a>
+                    <a class="btn ghost touch-btn" href="#contact">請聯繫我</a>
+                </div>
             </div>
+            <div class="hero-bg" aria-hidden="true"></div>
+        </section>
 
-            <div class="image-content"> <!-- 新增圖片的容器，為圖片內容區 -->
-                <img src="LB_station.jpg" alt="林邊車站" width="600" height="400">
-                <h6>林邊車站 2024/07/21 18：54拍攝</h6>
+        <!-- about / 關於我 -->
+        <section id="about" class="section reveal">
+            <div class="container">
+                <h2>關於我</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p><em>一個高二才初次接觸 C++ 的人，必須在短短一年內，掌握許多資工學生才能熟練的資訊科技？</em></p>
+                        </h5>
+                        <h6>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這應該是我第二次利用AI輔助寫網頁了。<br>
+                                <br>現在是個學測生又忙又茫又盲 ┗( T﹏T )┛<br>
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是個已經有夢想的人，但又不知該如何前進的高中生。<br>
+                                <br>一路上很感謝助我成長的朋友們，希望我們可以一同在屬於自己的道路上開滿花朵(●'◡'●)<br><br>
+                        
+                    <!--好啦我是因為有點懶得再去改CSS所以這段才土法煉鋼用&nbsp;的，別問我為什麼這麼長(￣▽￣)ノ -->    
+
+                        </h6>
+                        <h5>
+                            <p><em>「回想當初，我還在懊惱如何 cout 出 " Hello, World! " 呢 ww 」</em></p>
+                            <p><strong>現在只希望，初心未被現實吞噬。</strong></p>
+                    </div>
+                    <div class="about-media">
+                        <img src="LB_station.jpg" alt="林邊車站" class="rounded shadow" />
+                        <p style="text-align: center; font-weight: bold;">林邊車站 2024/07/21 18:54拍攝</p>
+                    </div>
+
+
+                </div>
             </div>
+        </section>
 
-
+        <!-- social / 社交軟體 -->
+        <section id="social" class="section reveal">
+            <div class="container">
+                <h2>社交軟體</h2>
+                <div class="social-grid-layout">
+                    <div class="social-text">
+                        <h6><p>喔對這是我常使用的社交軟體。</p></h6>
+                        <h6>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;除了閒閒沒事打電腦以外，也喜歡拍攝火車。<br>
+                                <br>做這網頁是想說試試水，很陽春請見諒。<br>
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;喔對如果你也是鐵道人士，不妨加個好友吧！
+                            </p>
+                        </h6>
+                    </div>
+                    <div class="social-links">
+                        <div class="social-card">
+                            <a href="https://www.facebook.com/share/1Z2Pvj5gK8/?mibextid=wwXIfr" target="_blank"
+                                rel="noopener noreferrer">Facebook</a>
+                        </div>
+                        <div class="social-card">
+                            <a href="https://www.instagram.com/pin_77.____/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a>
+                        </div>
+                        <div class="social-card">
+                            <a href="https://github.com/zengpinze" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                        <div class="social-card">
+                            <a href="https://discordapp.com/users/845567407082569739" target="_blank"
+                                rel="noopener noreferrer">Discord</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
 
-        <h1>關於我呢......</h1>
-        <h5 style="text-align: center; font-weight: normal;">
-            <em>一個高二才初次接觸 C++ 的人，必須在短短一年內，掌握許多資工學生才能熟練的資訊科技？</em>
-        </h5>
-        <h6>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;坦白說，每一行程式碼，都是與邏輯推演的一場深度對話、 每一次錯誤的排除，都是對思維韌性的鍛鍊。<br><br>
-                也許我現在，論矩陣，說遞迴，並不能馬上熟練的 output 出來， 時間，從來不是唯一的衡量標準。 <br><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;驅動我前行的，並非速成的訣竅，而是持之以恆的信念， 以及在追求極致中的不懈努力。 <br><br>
-                未來的路，注定是一段艱辛的旅程， 但這也是一場探索心中無限可能的冒險。 <br><br>
-        </h6>
-        <h5>
-            <em>「當初，我仍還在思考如何 cout 出 " Hello, World! " 」 </em>
-        </h5>
-        <h3>但願，初心未被現實吞噬</h3>
+        <!-- portfolio / 作品集 -->
+        <section id="portfolio" class="section reveal">
+            <div class="container">
+                <h2>專案研究</h2>
+                <div class="gallery">
+                    <figure class="card" tabindex="0">
+                        <img src="Xinwuri Station.jpg" alt="project 1" />
+                        <figcaption>
+                            <h3>《鐵道文化之旅》</h3>
+                            <p>一位熱愛鐵道的高中生 </p>
+                            <a class="btn ghost touch-btn"
+                                href="https://sites.google.com/view/pin7-self-directed-learning/%E7%B0%A1%E4%BB%8B">觸控按鈕</a>
+                        </figcaption>
+                    </figure>
 
-        <div style="display: flex; justify-content: flex-end;">
-            <p>———————————————————————Chat GPT 撰寫</p>
-        </div>
+                    <figure class="card" tabindex="0">
+                        <img src="Anping_Timewalk.jpg" alt="project 2" />
+                        <figcaption>
+                            <h3>《臺南安平一日遊》</h3>
+                            <p>：歷史與現代的交錯旅程</p>
+                            <a class="btn ghost touch-btn" href="https://zengpinze.github.io/Anping_Timewalk/">觸控按鈕</a>
+                        </figcaption>
+                    </figure>
 
-        <!-- 從這裡開始，是放連結的地方 -->
+                    <figure class="card" tabindex="0">
+                        <img src="thematic study.png" alt="project 3" />
+                        <figcaption>
+                            <h3>《AQUAS 水災預警系統》</h3>
+                            <p>高中生的專題研究</p>
+                            <a class="btn ghost touch-btn" href="https://zengpinze.github.io/water_sensor/">觸控按鈕</a>
+                        </figcaption>
+                    </figure>
 
-        <div class="container">
-            <!-- 第一排 左右 -->
-            <div class="row">
-                <div class="box left">
-                    <div class="title"><strong>Facebook</strong></div>
-                    <div class="subtitle">
-                        <a class="right" href="https://www.facebook.com/share/1Z2Pvj5gK8/?mibextid=wwXIfr"
-                            target="_blank">@Zeng Pinze</a>
-                    </div>
-                </div>
-                <div class="box right">
-                    <div class="title"><strong>Instagram</strong></div>
-                    <div class="subtitle">
-                        <a class="right" href="https://www.instagram.com/pinze_1217/" target="_blank">@pinze_1217</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 第二排 左右 -->
-            <div class="row">
-                <div class="box left">
-                    <div class="title"><strong>GitHub</strong></div>
-                    <div class="subtitle">
-                        <a class="right" href="https://github.com/zengpinze" target="_blank">@pin_77.</a>
-                    </div>
-                </div>
-                <div class="box right">
-                    <div class="title"><strong>Discord</strong></div>
-                    <div class="subtitle">
-                        <a class="right" href="https://discordapp.com/users/845567407082569739"
-                            target="_blank">@pin_77.</a>
-                    </div>
+                    <figure class="card" tabindex="0">
+                        <img src="brian.png" alt="project 4" />
+                        <figcaption>
+                            <h3>專案研究 4</h3>
+                            <p>敬請期待</p>
+                            <a class="btn ghost touch-btn" href="#">觸控按鈕</a>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
-            <div class="row">
-                <div class="box left">
-                    <div class="title"><strong>《鐵道文化之旅》</strong></div>
-                    <div class="subtitle">
-                        <a class="right"
-                            href="https://sites.google.com/view/pin7-self-directed-learning/%E7%B0%A1%E4%BB%8B"
-                            target="_blank">@Railway_pin</a>
-                    </div>
-                </div>
-                <div class="box right">
-                    <div class="title"><strong>AQUAS 水災預警系統</strong></div>
-                    <div class="subtitle">
-                        <a class="right" href="https://zengpinze.github.io/water_sensor/"
-                            target="_blank">@water_sensor</a>
-                    </div>
+        </section>
+
+
+
+
+        <!-- services / 項目 -->
+        <section id="services" class="section reveal">
+            <div class="container">
+                <h2>未來研究方向</h2>
+                <div class="grid services-grid">
+                    <article class="service card">
+                        <h3 class="editable">前進網站開發</h3>
+                        <p class="editable small">HTML / CSS / JavaScript，響應式設計。</p>
+                    </article>
+                    <article class="service card">
+                        <h3 class="editable">體驗鐵道文化</h3>
+                        <p class="editable small">聚焦於車種與機車頭辨識，結合運輸工程與系統設計。</p>
+                    </article>
+                    <article class="service card">
+                        <h3 class="editable">探索地球科學</h3>
+                        <p class="editable small">以天文、大氣、海洋、氣候、地質探索為核心</p>
+                    </article>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <!-- contact / 聯絡方式 -->
+        <section id="contact" class="section reveal">
+            <div class="container">
+                <h2>聯絡我</h2>
+                <form id="contactForm" class="contact-form">
+                    <label>姓名<input type="text" name="name" placeholder="你的名字" required></label>
+                    <label>電子郵件<input type="email" name="email" placeholder="example@mail.com" required></label>
+                    <label>訊息<textarea name="message" placeholder="在此輸入訊息"></textarea></label>
+                    <button type="submit" class="btn primary touch-btn">送出</button>
+                </form>
 
-        <!-- 結束 -->
-
-
-
-        <h4 style="text-align: center;">
-            <em> " 你終究會成為你正在成為的人 "</em>
-        </h4>
-
-
-        <p class="right-text">2025/04/03 製作</p>
+                <div class="contact-info">
+                    <p>Email：<span class="editable"> cengpinze@gmail.com</span></p>
+                    <p>座右銘：<span class="editable">追逐夢想之前，必須擁有籌碼</span></p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>©2025 Zeng Pinze[pin_77.] | cengpinze@gmail.com | All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Zeng Pinze [pin_77.] <span class="editable small"> | cengpinze@gmail.com |
+                    All rights reserved.</span>
+            </p>
+        </div>
     </footer>
-    <script src="script.js" defer></script>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
+
+<!-- 欸這是小彩蛋嘻嘻，你能看到這段文字代表你不簡單
+    然後我知道盧品碩一定會看我後台，所以我在這裡向你問好(?
+    好啦我知道你會說這到底三小，好啦等我之後學會更多再來改 = = 
+    -->
+    
