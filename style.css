@@ -224,9 +224,23 @@ h2 {
     align-items: start;
 }
 
+/* 響應式排版：手機改為單欄 */
+@media (max-width: 768px) {
+    .social-grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+}
+
 .social-text p {
     font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    /* 加入文字顏色變數支援 */
 }
 
 .social-links {
@@ -242,31 +256,124 @@ h2 {
     border-radius: var(--radius);
     text-align: center;
     font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+    /* 加入文字顏色變數支援 */
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .social-card:hover {
     transform: scale(1.05);
     background: var(--accent);
-    color: white;
+    color: #fff;
 }
 
+
+/* =========================
+   社交軟體區塊（#social）
+   ========================= */
+.social-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 電腦版：左文字右按鈕 */
+    gap: 20px;
+    align-items: start;
+}
+
+/* 手機版：改為上下排列 */
+@media (max-width: 768px) {
+    .social-grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    /* 支援高對比模式 */
+}
+
+/* 社交連結區塊：2x2 方塊排列 */
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* 社交卡片樣式（整個方塊看起來像按鈕） */
+.social-card {
+    background: #e0e0e0;
+    /* ✅ 灰色背景 */
+    padding: 15px;
+    border-radius: var(--radius);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+    transition: transform 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+}
+
+/* ✅ 讓超連結不顯示底線，並撐滿整個卡片 */
+.social-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+/* ✅ hover 效果：放大並改背景色 */
+.social-card:hover {
+    transform: scale(1.05);
+    background: var(--accent);
+    color: #fff;
+}
+
+/* ✅ 動畫效果（淡入向上） */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 /* =========================
    作品集 / gallery（格狀顯示）
    桌面兩欄、手機一欄
    ========================= */
-/* ✅ 作品集容器：二乘二排版 */
+
+/* ✅ 作品集容器 */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 桌面版兩欄 */
+    /* 桌面版：兩欄 */
     gap: 2rem;
     padding: 2rem 0;
 }
 
-
+/* ✅ 手機版：改為單欄 */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        /* 直列一欄 */
+    }
+}
 
 /* ✅ 單張作品卡片樣式 */
 .card {
@@ -279,10 +386,12 @@ h2 {
     flex-direction: column;
 }
 
-/* ✅ 懸浮動畫 */
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 26px rgba(12, 45, 70, 0.09);
+/* ✅ 懸浮動畫（桌機滑鼠才有） */
+@media (hover: hover) and (pointer: fine) {
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 26px rgba(12, 45, 70, 0.09);
+    }
 }
 
 /* ✅ 圖片設定 */
@@ -290,6 +399,7 @@ h2 {
     width: 100%;
     height: 160px;
     object-fit: cover;
+    display: block;
 }
 
 /* ✅ 文字區塊：標題置中、加粗 */
@@ -302,70 +412,9 @@ h2 {
     /* 可自訂主色 */
 }
 
-/* ✅ 社群連結區塊（可放在 figcaption 下方） */
-.card .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding-bottom: 1rem;
-}
 
-.card .social-links a {
-    color: #4a90e2;
-    font-size: 1.2rem;
-    transition: color 0.2s ease;
-}
 
-.card .social-links a:hover {
-    color: #0077cc;
-}
 
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 兩欄 */
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.social-card {
-    background-color: #f2f2f2;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.social-card a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.social-card a:hover {
-    text-decoration: underline;
-}
-
-/* ✅ 尚無內容時的占位樣式 */
-.placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(180deg, #f8fdff, #eef9ff);
-    border-radius: 12px;
-    height: 160px;
-}
-
-.placeholder-box {
-    padding: 1.2rem;
-    border: 2px dashed #d9eefc;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 0.95rem;
-    color: #88a2b9;
-}
 
 /* =========================
    服務項目（services-grid）
@@ -515,11 +564,11 @@ body {
         --box-bg: #F0F0F0;
     }
 
-    .box, .announcement-item, .modal-content {
+    .box,
+    .announcement-item,
+    .modal-content {
         border: 2px solid #000000;
     }
 }
 
-
 /* 拍謝吼我CSS不太熟，所以註解比較多 */
-
