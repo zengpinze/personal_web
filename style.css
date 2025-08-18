@@ -252,12 +252,6 @@ h2 {
 }
 
 
-/* ✅ 響應式調整 */
-@media (max-width: 600px) {
-    #social .container {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* =========================
    作品集 / gallery（格狀顯示）
@@ -272,12 +266,7 @@ h2 {
     padding: 2rem 0;
 }
 
-/* ✅ 響應式設計：手機版一欄 */
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 /* ✅ 單張作品卡片樣式 */
 .card {
@@ -533,3 +522,4 @@ body {
 
 
 /* 拍謝吼我CSS不太熟，所以註解比較多 */
+
