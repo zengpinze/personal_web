@@ -335,6 +335,27 @@ h2 {
     }
 }
 
+/* 人格特質區塊（personality-grid） */
+.personality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.personality-grid .card {
+    padding: 1.2rem;
+    text-align: center;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.personality-grid .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
 
 
