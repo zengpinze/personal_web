@@ -1,2 +1,2 @@
-網址連結：https://zengpinze.github.io/personal_web/
+Web page：https://zengpinze.github.io/personal_web/
 
