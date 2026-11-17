@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   if (form) form.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('感謝！表單已模擬送出（請自行接後端）');
+    alert('哈哈你白打了，因為我還沒做後端');
     form.reset();
   });
 
